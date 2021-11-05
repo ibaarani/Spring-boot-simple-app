@@ -23,6 +23,7 @@ public class UserController {
 		model.addAttribute("listStudents", listStudents);
 
 		return  listStudents;
+
 	}
 
 
