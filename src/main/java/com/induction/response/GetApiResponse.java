@@ -2,6 +2,7 @@ package com.induction.response;
 
 public class GetApiResponse {
  
+	
 	private long id;
 	private String Firstname ;
 	private String Lastname;
