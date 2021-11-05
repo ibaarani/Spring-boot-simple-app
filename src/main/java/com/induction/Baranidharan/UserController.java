@@ -26,6 +26,11 @@ public class UserController {
 
 	}
 
+	@PostMapping
+	public testdb createEmployee( @RequestBody testdb employee) {
+		return studentRepo.save(employee);
+	}
+
 
 
 

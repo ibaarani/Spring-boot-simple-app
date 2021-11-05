@@ -12,6 +12,7 @@ public class testdb {
     private String name;
     private String email;
 
+
     public Integer getId() {
         return id;
     }
@@ -37,4 +38,8 @@ public class testdb {
     }
 
     // getters and setters...
+    @Override
+    public String toString() {
+        return "Employee [id=" + id + ", name=" + name + ", email=" + email + "]";
+    }
 }
