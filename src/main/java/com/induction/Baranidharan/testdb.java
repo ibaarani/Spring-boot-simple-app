@@ -1,12 +1,15 @@
 package com.induction.Baranidharan;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
+@Data
 @Table(name = "students")
 public class testdb {
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue
 
     // auto matic generation of id needs to be fixed
     private Integer id;
@@ -40,9 +43,5 @@ public class testdb {
         this.email = email;
     }
 
-    // getters and setters...
-    @Override
-    public String toString() {
-        return "Employee [id=" + id + ", name=" + name + ", email=" + email + "]";
-    }
+
 }
