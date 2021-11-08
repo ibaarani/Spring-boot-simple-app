@@ -6,11 +6,14 @@ import javax.persistence.*;
 @Table(name = "students")
 public class testdb {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    // auto matic generation of id needs to be fixed
     private Integer id;
 
     private String name;
     private String email;
+
 
 
     public Integer getId() {
