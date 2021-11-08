@@ -13,8 +13,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-@EnableScheduling
-public class secdule {
+
+public class secdule{
 
     @Autowired
     private StudentRepository ss;
