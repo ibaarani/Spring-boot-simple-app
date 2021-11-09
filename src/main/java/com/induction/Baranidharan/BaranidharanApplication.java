@@ -1,5 +1,8 @@
 package com.induction.Baranidharan;
 
+
+import org.hibernate.dialect.SybaseAnywhereDialect;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,7 +26,7 @@ public class BaranidharanApplication {
 
 	{
 		try {
-			url = new URL("https://api.jokes.one/jod?category=animal");
+			url = new URL("https://restcountries.com/v3.1/all");
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
@@ -78,10 +81,21 @@ public class BaranidharanApplication {
 			BufferedReader br = new BufferedReader(new InputStreamReader(urlc.getInputStream()));
 			String l = null;
 			while ((l=br.readLine())!=null) {
-				dr.setId(2);
-				dr.setEmail(l);
+				//dr.setId(2);
+				//dr.setEmail(l);
+				//studentRepository.save(dr);
+				//JSONObject obj = new JSONObject(l);
+				//System.out.println("Employee ID: "+obj.getJSONObject("contents").getJSONArray("jokes").getString(1));
+				var ang = l;
+				var newstr = ang.substring(1, ang.length()-1);
+				JSONObject obj = new JSONObject(newstr);
+				System.out.println("Employee ID: "+obj.getJSONObject("name").getString("official"));
+				//System.out.println(l);
+				dr.setId(1);
+				dr.setEmail(obj.getJSONObject("name").getString("official"));
+				//dr.setDate("hekko");
+				dr.setName("sign in");
 				studentRepository.save(dr);
-				System.out.println(l);
 			}
 			br.close();
 		} catch (Exception e){

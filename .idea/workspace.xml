@@ -15,7 +15,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/induction/Baranidharan/BaranidharanApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/induction/Baranidharan/BaranidharanApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/induction/Baranidharan/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/induction/Baranidharan/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/induction/Baranidharan/BaranidharanApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/induction/Baranidharan/BaranidharanApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/induction/Baranidharan/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/induction/Baranidharan/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/induction/Baranidharan/testdb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/induction/Baranidharan/testdb.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +159,8 @@
       <updated>1636101786969</updated>
       <workItem from="1636101789736" duration="15276000" />
       <workItem from="1636353354576" duration="3825000" />
-      <workItem from="1636433061410" duration="2664000" />
+      <workItem from="1636433061410" duration="4043000" />
+      <workItem from="1636448538440" duration="4758000" />
     </task>
     <task id="LOCAL-00001" summary="Day 2 task connect the database psql , get values from the tables using postman completed">
       <created>1636115558885</created>

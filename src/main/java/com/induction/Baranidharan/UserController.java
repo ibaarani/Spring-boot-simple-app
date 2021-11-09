@@ -22,7 +22,6 @@ public class UserController {
 	public List<testdb> listAll(Model model) {
 		List<testdb> listStudents = studentRepo.findAll();
 		model.addAttribute("listStudents", listStudents);
-
 		return  listStudents;
 
 	}
