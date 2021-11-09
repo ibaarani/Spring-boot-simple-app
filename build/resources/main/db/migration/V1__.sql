@@ -1,0 +1,1 @@
+create table tt(id int , name text);
