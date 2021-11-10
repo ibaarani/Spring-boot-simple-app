@@ -18,7 +18,7 @@ import java.net.URL;
 import java.util.Calendar;
 
 @SpringBootApplication
-@EnableScheduling
+//@EnableScheduling
 
 public class BaranidharanApplication {
 

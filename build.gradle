@@ -23,6 +23,12 @@ dependencies {
 	implementation "org.flywaydb:flyway-core:8.0.3"
 	testImplementation 'org.awaitility:awaitility:4.1.1'
 	implementation "org.json:json:20141113"
+	//implementation "org.springframework.kafka:spring-kafka:*"
+	//implementation "org.springframework.kafka:spring-kafka:2.1.0.RELEASE"
+	implementation 'org.springframework.kafka:spring-kafka'
+	testImplementation 'org.springframework.kafka:spring-kafka-test'
+
+
 
 }
 
