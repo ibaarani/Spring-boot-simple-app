@@ -4,9 +4,10 @@ import lombok.Data;
 import org.apache.catalina.User;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-
+@Data
 @Table(name = "students")
 public class TestDb {
     @Id
@@ -17,6 +18,8 @@ public class TestDb {
 
     private String name;
     private String email;
+    @ManyToOne
+    private TestDb testDb;
 
 
     public Integer getId() {

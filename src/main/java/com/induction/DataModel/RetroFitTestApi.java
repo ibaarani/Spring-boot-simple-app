@@ -51,11 +51,4 @@ public class RetroFitTestApi {
         this.completed = completed;
     }
 
-    public RetroFitTestApi(long userid, long id, String title, String completed) {
-
-        this.userid = userid;
-        this.id = id;
-        this.title = title;
-        this.completed = completed;
-    }
 }
