@@ -15,13 +15,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/induction/Baranidharan/BaranidharanApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/induction/Baranidharan/BaranidharanApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/induction/Baranidharan/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/induction/Baranidharan/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/induction/Baranidharan/BaranidharanApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/induction/Baranidharan/BaranidharanApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/induction/Baranidharan/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/induction/Baranidharan/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/induction/Baranidharan/testdb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/induction/Baranidharan/testdb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/induction/BaranidharanApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/induction/BaranidharanApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/induction/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/induction/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/induction/DataModel/RetroFitTestApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/induction/DataModel/RetroFitTestApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/induction/RetrofitClass/Retrofitcallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/induction/RetrofitClass/Retrofitcallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/induction/secduletask/Schedulers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/induction/secduletask/Schedulers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BaranidharanApplication (1)">
+  <component name="RunManager" selected="Spring Boot.BaranidharanApplication (2)">
     <configuration name="Baranidharan  [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -130,6 +129,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BaranidharanApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Baranidharan.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.induction.BaranidharanApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BaranidharanApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.induction.Baranidharan.BaranidharanApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -142,6 +148,7 @@
       <item itemvalue="Gradle.Baranidharan  [test]" />
       <item itemvalue="Spring Boot.BaranidharanApplication" />
       <item itemvalue="Spring Boot.BaranidharanApplication (1)" />
+      <item itemvalue="Spring Boot.BaranidharanApplication (2)" />
     </list>
     <recent_temporary>
       <list>
@@ -161,6 +168,8 @@
       <workItem from="1636353354576" duration="3825000" />
       <workItem from="1636433061410" duration="4043000" />
       <workItem from="1636448538440" duration="4758000" />
+      <workItem from="1637075373344" duration="26000" />
+      <workItem from="1637075409843" duration="9855000" />
     </task>
     <task id="LOCAL-00001" summary="Day 2 task connect the database psql , get values from the tables using postman completed">
       <created>1636115558885</created>

@@ -50,5 +50,4 @@ public class RetroFitTestApi {
     public void setCompleted(String completed) {
         this.completed = completed;
     }
-
 }

@@ -1,15 +1,15 @@
 package com.induction.Controller;
 
 
-import com.induction.Baranidharan.TestDb;
 import com.induction.DataModel.RetroFitTestApi;
 import com.induction.Repository.StudentRepository;
 import com.induction.Repository.TestApiInterface;
 import com.induction.RetrofitClass.Retrofitcallback;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import retrofit2.Call;
+import retrofit2.Response;
 
 
 //import com.induction.response;
@@ -26,7 +26,7 @@ public class UserController {
 	private StudentRepository studentRepo;
 
 	@Autowired
-	public  Retrofitcallback retrofitcallback;
+	public Retrofitcallback retrofitcallback;
 
 	@Autowired
 	public TestApiInterface testApiInterface;
@@ -52,17 +52,24 @@ public class UserController {
 	public List<RetroFitTestApi> listAll(Model model2) {
 		List<RetroFitTestApi> listStudents = testApiInterface.findAll();
 		model2.addAttribute("listStudents", listStudents);
-		return  listStudents;
+		return listStudents;
 
 	}
 
 
-     public RetroFitTestApi createEmployee(@RequestBody RetroFitTestApi employee) {
+	public RetroFitTestApi createEmployee(@RequestBody RetroFitTestApi employee) {
 		return testApiInterface.save(employee);
 	}
 
+	@GetMapping("/finaltry")
+	public RetroFitTestApi getRepos() throws IOException {
+		Call<RetroFitTestApi> retrofitCall = retrofitcallback.getUser(5);
 
+		Response<RetroFitTestApi> response = retrofitCall.execute();
 
+		return  response.body();
+
+		}
 //kafka module
 //	@GetMapping("/publish/{message}")
 //	public String post(@PathVariable("message") final String message)
@@ -79,29 +86,27 @@ public class UserController {
 //	}
 
 //
-	@GetMapping(value = "/users/{id}")
-	public User getUser(@PathVariable String id) {
-		return ;
+//	@GetMapping(value = "/users/{id}")
+//	public User getUser(@PathVariable String id) {
+//		return ;
+//
+//	}
 
-	}
 
-
-	@GetMapping("/hit1")
+		//@GetMapping("/hit1")
 //		System.out.println(retrofitcallback.getUser("dem"));
-		public List<RetroFitTestApi> getRepos() throws IOException {
-		return (List<RetroFitTestApi>) retrofitcallback.getUser("hello");
-	}
+//		public List<RetroFitTestApi> getRepos() throws IOException {
+//		return (List<RetroFitTestApi>) retrofitcallback.getUser("hello");
+//	}
 
 
-
-
-	@GetMapping("/employees")
-	List<TestDb> all() {
-		return studentRepo.findAll();
-	}
+//		List<TestDb> all() {
+//		return studentRepo.findAll();
+//	}
 
 //	public List<RetroFitTestApi> getRepos() throws IOException {
 //		return (List<RetroFitTestApi>) retrofitcallback.getUser("hello");
+		//return retrofitCall;
 	}
 
 

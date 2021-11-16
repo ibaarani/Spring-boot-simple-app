@@ -9,6 +9,7 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
@@ -23,9 +24,12 @@ public interface Retrofitcallback {
             @Query("per_page") int per_page,
             @Query("page") int page);
 
-    @GET("/user/{id}")
-    public Call<RetroFitTestApi> getUser(@Path("id") String username);
-
+    @GET("/todos/{id}")
+    public Call<RetroFitTestApi> getUser(@Path("id") Integer Id);
+//
+//    @GET("/u")
+//    public Call<RetroFitTestApi> getdata(@Path(("id") ));
+//
 
 
 

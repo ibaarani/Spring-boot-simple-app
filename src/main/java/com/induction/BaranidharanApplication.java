@@ -13,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -24,48 +25,17 @@ import java.net.MalformedURLException;
 import java.net.URL;
 @SpringBootApplication
 @Configuration
-//@EnableScheduling
+@EnableScheduling
 public class BaranidharanApplication {
-	public static  int a = 0;
-	URL url;
-	{
-		try {
-			url = new URL("https://jsonplaceholder.typicode.com/todos/1");
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		}
-	}
-
-	//@Autowired
-	StudentRepository studentRepository;
-	TestDb dr = new TestDb();
-	RetroFitTestApi r = new RetroFitTestApi();
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(BaranidharanApplication.class, args);
 
 
 	}
-	/*
-	// post data using the shedulers
-	@Scheduled(cron = "*10 * * * * *")
-	public void run() {
 
-		//testdb dr = new testdb();
-		int a = 100;
-		//String date = Calendar.getInstance().getTime();
-		dr.setId(++a);
-		dr.setName("baani");
-		dr.setEmail("hey google");
-		dr.setDate();
-		studentRepository.save(dr);
-
-	}*/
-
-	//get data from schedulers
-
-		//query group by
-		@Query("SELECT c.id  FROM RetroFitTestApi AS c GROUP BY c.id ORDER BY c.id DESC")
+		//@Query("SELECT c.id  FROM RetroFitTestApi AS c GROUP BY c.id ORDER BY c.id DESC")
 
 
 	@Bean
@@ -75,12 +45,11 @@ public class BaranidharanApplication {
 				.build();
 	}
 
-
 	@Bean
 	public Retrofit RRetrofit(@Qualifier("okHttpClient") OkHttpClient client) {
 		return new Retrofit.Builder()
 				.addConverterFactory(GsonConverterFactory.create())
-				.baseUrl("https://jsonplaceholder.typicode.com/todos/")
+				.baseUrl("https://jsonplaceholder.typicode.com")
 				.client(client)
 				.build();
 	}
