@@ -1,13 +1,14 @@
 package com.induction.Baranidharan;
 
 import lombok.Data;
+import org.apache.catalina.User;
 
 import javax.persistence.*;
 
 @Entity
-@Data
+
 @Table(name = "students")
-public class testdb {
+public class TestDb {
     @Id
     //@GeneratedValue
 
@@ -41,6 +42,5 @@ public class testdb {
     public void setEmail(String email) {
         this.email = email;
     }
-
 
 }

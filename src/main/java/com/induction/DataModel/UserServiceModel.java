@@ -1,6 +1,6 @@
-package com.induction.Baranidharan;
+package com.induction.DataModel;
 
-public class userservicemodel {
+public class UserServiceModel {
 
     Integer userId;
     Integer id;
@@ -39,12 +39,12 @@ public class userservicemodel {
         this.completed = completed;
     }
 
-    public userservicemodel(Integer userId, Integer id, String title, Boolean completed) {
+    public UserServiceModel(Integer userId, Integer id, String title, Boolean completed) {
         this.userId = userId;
         this.id = id;
         this.title = title;
         this.completed = completed;
     }
 
-    public userservicemodel() {}
+    public UserServiceModel() {}
 }

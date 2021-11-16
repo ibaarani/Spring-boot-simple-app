@@ -1,24 +1,20 @@
 package com.induction.secduletask;
 
 
-import com.induction.Baranidharan.StudentRepository;
-import com.induction.Baranidharan.testdb;
+import com.induction.Repository.StudentRepository;
+import com.induction.Baranidharan.TestDb;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
 
 
-public class secdule{
+public class Secduler {
 
     @Autowired
     private StudentRepository ss;
-    private  testdb s;
+    private TestDb s;
 
 
     @Component

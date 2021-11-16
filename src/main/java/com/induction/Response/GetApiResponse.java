@@ -1,4 +1,4 @@
-package com.induction.response;
+package com.induction.Response;
 
 public class GetApiResponse {
  

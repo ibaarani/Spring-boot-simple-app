@@ -1,40 +1,44 @@
 package com.induction.Baranidharan;
 
 
-import org.hibernate.dialect.SybaseAnywhereDialect;
+import com.induction.DataModel.RetroFitTestApi;
+import com.induction.Repository.StudentRepository;
+import com.induction.RetrofitClass.Retrofitcallback;
+import okhttp3.OkHttpClient;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
-import javax.persistence.ManyToOne;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Calendar;
-
 @SpringBootApplication
-//@EnableScheduling
-
+@EnableScheduling
 public class BaranidharanApplication {
-
+	public static  int a = 0;
 	URL url;
-
 	{
 		try {
-			url = new URL("https://restcountries.com/v3.1/all");
+			url = new URL("https://jsonplaceholder.typicode.com/todos/1");
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
 	}
 
-	@Autowired
+	//@Autowired
 	StudentRepository studentRepository;
-	testdb dr = new testdb();
+	TestDb dr = new TestDb();
+	RetroFitTestApi r = new RetroFitTestApi();
 
 	public static void main(String[] args) {
 		SpringApplication.run(BaranidharanApplication.class, args);
@@ -58,7 +62,7 @@ public class BaranidharanApplication {
 	}*/
 
 	//get data from schedulers
-	@Scheduled(cron = "*/1 * * * * *")
+	@Scheduled(cron = "*/10 * * * * *")
 	public void run() {
 		//System.out.println("Current time is :: " + Calendar.getInstance().getTime());
 		//int a = dr.getId();
@@ -67,10 +71,13 @@ public class BaranidharanApplication {
 		//String mail = dr.getEmail();
 		//System.out.println(mail+name);
 		try{
+
+			a++;
+			url = new URL("https://jsonplaceholder.typicode.com/todos/"+ a);
 			//make connection
 			HttpURLConnection urlc = (HttpURLConnection) url.openConnection();
 			urlc.setRequestMethod("GET");
-			// set the content type
+			//set the content type
 			urlc.setRequestProperty("Content-Type", "application/json");
 			urlc.setRequestProperty("X-JokesOne-Api-Secret", "YOUR API KEY HERE");
 			System.out.println("Connect to: " + url.toString());
@@ -85,24 +92,59 @@ public class BaranidharanApplication {
 				//dr.setEmail(l);
 				//studentRepository.save(dr);
 				//JSONObject obj = new JSONObject(l);
+
 				//System.out.println("Employee ID: "+obj.getJSONObject("contents").getJSONArray("jokes").getString(1));
 				var ang = l;
-				var newstr = ang.substring(1, ang.length()-1);
-				JSONObject obj = new JSONObject(newstr);
-				System.out.println("Employee ID: "+obj.getJSONObject("name").getString("official"));
-				//System.out.println(l);
-				dr.setId(1);
-				dr.setEmail(obj.getJSONObject("name").getString("official"));
-				//dr.setDate("hekko");
-				dr.setName("sign in");
-				studentRepository.save(dr);
+				// var newstr = ang.substring(1, ang.length()-1);
+				JSONObject obj = new JSONObject(ang);
+				System.out.print(obj);
+				//System.out.println("Employee ID: "+obj.getJSONArray("userid").getString(1));
+
+
+
+
+
+				//datasave
+
+				//r.setId();
+				//r.setTitle();
+				//r.setUserid();
+				//r.setCompleted();
+				//studentRepository.save(r);
 			}
 			br.close();
-		} catch (Exception e){
+		} catch (Exception e) {
 			System.out.println("Error occured");
 			System.out.println(e.toString());
 		}
 		}
 
+	@Bean
+	public OkHttpClient okHttpClient() {
+		return new OkHttpClient.Builder()
+				.addInterceptor(chain -> chain.proceed(chain.request()))
+				.build();
 	}
+
+
+	@Bean
+	public Retrofit RRetrofit(@Qualifier("okHttpClient") OkHttpClient client) {
+		return new Retrofit.Builder()
+				.addConverterFactory(GsonConverterFactory.create())
+				.baseUrl("https://jsonplaceholder.typicode.com/todos/")
+				.client(client)
+				.build();
+	}
+
+	@Bean
+	public Retrofitcallback retrofitcallback(@Qualifier("RRetrofit") Retrofit retrofit) {
+		return retrofit.create(Retrofitcallback.class);
+	}
+
+
+
+
+
+
+}
 
